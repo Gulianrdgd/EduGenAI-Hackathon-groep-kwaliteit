@@ -1,4 +1,7 @@
 <script lang="ts">
+	import remixesData from '$lib/data/remixes.json';
+	import CreateRemixModal from './CreateRemixModal.svelte';
+
 	interface Review {
 		naam: string;
 		rol: string;
@@ -11,6 +14,25 @@
 		risico: string;
 		beschrijving: string;
 		ernst: 'low' | 'medium' | 'high';
+	}
+
+	interface Remix {
+		id: string;
+		originalPersonaId: string;
+		titel: string;
+		beschrijving: string;
+		image: string;
+		remixedBy: {
+			userId: string;
+			naam: string;
+			datum: string;
+		};
+		changes: {
+			systemPrompt: string | null;
+			knowledge: string | null;
+		};
+		uitvoeringen: string;
+		rating: number;
 	}
 
 	interface ExpectedOut {
@@ -45,10 +67,23 @@
 				aiGenerated: Risico[];
 			};
 			automated_tests?: AutomatedTests;
+			remixSettings?: {
+				allowRemix: boolean;
+				allowSystemPromptEdit: boolean;
+				allowKnowledgeEdit: boolean;
+			};
 		};
 	}
 
 	let { persona }: Props = $props();
+
+	// Get remixes for this persona
+	const personaRemixes = remixesData.remixes.filter(
+		(remix) => remix.originalPersonaId === persona.id
+	);
+
+	// State for Create Remix modal
+	let showCreateRemixModal = $state(false);
 
 	function getSeverityColor(ernst: string): string {
 		switch (ernst) {
@@ -301,13 +336,98 @@
 				{/if}
 			</div>
 		{:else if activeTab === 'remixes'}
-			<div class="py-12 text-center">
-				<div class="text-6xl">🎨</div>
-				<h3 class="mt-4 text-lg font-medium text-gray-900">Nog geen remixes</h3>
-				<p class="mt-2 text-sm text-gray-600">
-					Remixes van deze persona verschijnen hier wanneer ze zijn gemaakt.
-				</p>
-			</div>
+			{#if persona.remixSettings?.allowRemix}
+				<!-- Create Remix Button -->
+				<div class="mb-6 flex items-center justify-between rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4">
+					<div>
+						<h4 class="font-semibold text-gray-900">Maak je eigen remix</h4>
+						<p class="mt-1 text-sm text-gray-600">
+							Pas deze persona aan naar jouw behoeften
+							{#if persona.remixSettings.allowSystemPromptEdit && persona.remixSettings.allowKnowledgeEdit}
+								(prompt & kennis)
+							{:else if persona.remixSettings.allowSystemPromptEdit}
+								(alleen prompt)
+							{:else if persona.remixSettings.allowKnowledgeEdit}
+								(alleen kennis)
+							{/if}
+						</p>
+					</div>
+					<button
+						onclick={() => (showCreateRemixModal = true)}
+						class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+					>
+						+ Maak Remix
+					</button>
+				</div>
+
+				{#if personaRemixes.length > 0}
+					<!-- Existing Remixes -->
+					<div class="space-y-4">
+						{#each personaRemixes as remix}
+							<div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition">
+								<div class="flex items-start gap-4">
+									<div class="text-4xl">{remix.image}</div>
+									<div class="flex-1">
+										<h4 class="font-semibold text-gray-900">{remix.titel}</h4>
+										<p class="mt-1 text-sm text-gray-600">{remix.beschrijving}</p>
+
+										<!-- Remix Info -->
+										<div class="mt-3 flex items-center gap-4 text-xs text-gray-500">
+											<span>🔄 Remix door {remix.remixedBy.naam}</span>
+											<span>▶ {remix.uitvoeringen} uitvoeringen</span>
+											<span>⭐ {remix.rating}/5</span>
+											<span>{new Date(remix.remixedBy.datum).toLocaleDateString('nl-NL')}</span>
+										</div>
+
+										<!-- Changes Made -->
+										<div class="mt-3 space-y-1">
+											{#if remix.changes.systemPrompt}
+												<div class="flex items-start gap-2 text-xs">
+													<span class="rounded bg-purple-100 px-2 py-0.5 text-purple-800">Prompt</span>
+													<span class="text-gray-600">{remix.changes.systemPrompt}</span>
+												</div>
+											{/if}
+											{#if remix.changes.knowledge}
+												<div class="flex items-start gap-2 text-xs">
+													<span class="rounded bg-green-100 px-2 py-0.5 text-green-800">Kennis</span>
+													<span class="text-gray-600">{remix.changes.knowledge}</span>
+												</div>
+											{/if}
+										</div>
+
+										<!-- Action Button -->
+										<div class="mt-3">
+											<a
+												href="/persona/{remix.id}"
+												class="inline-block rounded bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 hover:bg-gray-200"
+											>
+												Bekijk remix →
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						{/each}
+					</div>
+				{:else}
+					<div class="py-8 text-center">
+						<div class="text-6xl">🎨</div>
+						<h3 class="mt-4 text-lg font-medium text-gray-900">Nog geen remixes</h3>
+						<p class="mt-2 text-sm text-gray-600">
+							Wees de eerste om een remix te maken van deze persona!
+						</p>
+					</div>
+				{/if}
+			{:else}
+				<!-- Remixing Not Allowed -->
+				<div class="py-12 text-center">
+					<div class="text-6xl">🔒</div>
+					<h3 class="mt-4 text-lg font-medium text-gray-900">Remixen niet toegestaan</h3>
+					<p class="mt-2 text-sm text-gray-600">
+						De maker van deze persona staat geen remixes toe.
+					</p>
+				</div>
+			{/if}
 		{:else if activeTab === 'reviews'}
 			{#if persona.reviews && persona.reviews.length > 0}
 				<div class="space-y-6">
@@ -343,3 +463,13 @@
 		{/if}
 	</div>
 </div>
+
+<!-- Create Remix Modal -->
+{#if persona.remixSettings?.allowRemix}
+	<CreateRemixModal
+		personaTitel={persona.titel}
+		remixSettings={persona.remixSettings}
+		isOpen={showCreateRemixModal}
+		onClose={() => (showCreateRemixModal = false)}
+	/>
+{/if}

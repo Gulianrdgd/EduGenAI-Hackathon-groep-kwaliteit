@@ -10,6 +10,11 @@
       "ratingDocenten": 4,
       "image": "🏥",
       "creatorId": "dr-van-der-berg",
+      "remixSettings": {
+        "allowRemix": true,
+        "allowSystemPromptEdit": true,
+        "allowKnowledgeEdit": false
+      },
       "detailBeschrijving": {
         "intro": "Cassandra is een interactieve oefenpatiënt voor geneeskundestudenten, artsen in opleiding (AIOS) en zorgprofessionals.",
         "watKanJe": [
@@ -95,6 +100,11 @@
       "ratingDocenten": 4,
       "image": "📊",
       "creatorId": "drs-de-vries",
+      "remixSettings": {
+        "allowRemix": true,
+        "allowSystemPromptEdit": false,
+        "allowKnowledgeEdit": true
+      },
       "detailBeschrijving": {
         "intro": "Een AI-assistent die je helpt bij het structureren en schrijven van management rapporten.",
         "watKanJe": [
@@ -169,6 +179,11 @@
       "ratingDocenten": 5,
       "image": "✏️",
       "creatorId": "dr-bakker",
+      "remixSettings": {
+        "allowRemix": true,
+        "allowSystemPromptEdit": true,
+        "allowKnowledgeEdit": true
+      },
       "detailBeschrijving": {
         "intro": "Een AI-assistent die constructieve feedback geeft op je academische werk.",
         "watKanJe": [
@@ -268,6 +283,11 @@
       "ratingDocenten": 5,
       "image": "💭",
       "creatorId": "prof-jansen",
+      "remixSettings": {
+        "allowRemix": false,
+        "allowSystemPromptEdit": false,
+        "allowKnowledgeEdit": false
+      },
       "detailBeschrijving": {
         "intro": "Een AI die de Socratische methode gebruikt om kritisch denken te stimuleren.",
         "watKanJe": [
@@ -501,9 +521,9 @@
   "titel": "Pretend Napoleon",
   "beschrijving": "A persona that pretends to be Napoleon Bonaparte.",
   "categorie": "Historisch / Educatief",
-  "uitvoeringen": "0",
-  "ratingStudenten": null,
-  "ratingDocenten": null,
+  "uitvoeringen": "166",
+  "ratingStudenten": 5,
+  "ratingDocenten": 2,
   "image": "🪖",
   "creatorId": "unknown",
   "detailBeschrijving": {

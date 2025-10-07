@@ -1,0 +1,130 @@
+{
+  "remixes": [
+    {
+      "id": "patient-gesprek-diabetes",
+      "originalPersonaId": "patient-gesprek-oncologie",
+      "titel": "Patiënt gesprek oefenen - Diabetes",
+      "beschrijving": "Oefen gesprekken met diabetes patiënten",
+      "image": "🏥",
+      "remixedBy": {
+        "userId": "ir-smit",
+        "naam": "Ir. Thomas Smit",
+        "datum": "2025-09-18"
+      },
+      "changes": {
+        "systemPrompt": "Aangepast naar diabetes type 2 patiënt met complicaties",
+        "knowledge": null
+      },
+      "uitvoeringen": "3.2K",
+      "rating": 4
+    },
+    {
+      "id": "patient-gesprek-cardiologie",
+      "originalPersonaId": "patient-gesprek-oncologie",
+      "titel": "Patiënt gesprek oefenen - Cardiologie",
+      "beschrijving": "Oefen gesprekken met hart- en vaatziekten patiënten",
+      "image": "🏥",
+      "remixedBy": {
+        "userId": "dr-van-der-berg",
+        "naam": "Dr. Sophie van der Berg",
+        "datum": "2025-09-20"
+      },
+      "changes": {
+        "systemPrompt": "Aangepast naar patiënt met hartfalen en angina pectoris",
+        "knowledge": null
+      },
+      "uitvoeringen": "5.8K",
+      "rating": 5
+    },
+    {
+      "id": "patient-gesprek-neurologie",
+      "originalPersonaId": "patient-gesprek-oncologie",
+      "titel": "Patiënt gesprek oefenen - Neurologie",
+      "beschrijving": "Oefen gesprekken met neurologische patiënten",
+      "image": "🏥",
+      "remixedBy": {
+        "userId": "prof-jansen",
+        "naam": "Prof. Dr. Mark Jansen",
+        "datum": "2025-09-22"
+      },
+      "changes": {
+        "systemPrompt": "Aangepast naar patiënt met multiple sclerose en mobiliteitsproblemen",
+        "knowledge": null
+      },
+      "uitvoeringen": "2.1K",
+      "rating": 4
+    },
+    {
+      "id": "management-rapport-nonprofit",
+      "originalPersonaId": "management-rapport",
+      "titel": "Nonprofit rapport schrijven",
+      "beschrijving": "Hulp bij het schrijven van rapporten voor non-profit organisaties",
+      "image": "📊",
+      "remixedBy": {
+        "userId": "drs-de-vries",
+        "naam": "Drs. Emma de Vries",
+        "datum": "2025-09-16"
+      },
+      "changes": {
+        "systemPrompt": null,
+        "knowledge": "Toegevoegd: non-profit rapportage templates en voorbeelden"
+      },
+      "uitvoeringen": "1.8K",
+      "rating": 4
+    },
+    {
+      "id": "management-rapport-startup",
+      "originalPersonaId": "management-rapport",
+      "titel": "Startup pitch deck schrijven",
+      "beschrijving": "Hulp bij het maken van pitch decks en business plans voor startups",
+      "image": "📊",
+      "remixedBy": {
+        "userId": "ir-smit",
+        "naam": "Ir. Thomas Smit",
+        "datum": "2025-09-24"
+      },
+      "changes": {
+        "systemPrompt": null,
+        "knowledge": "Toegevoegd: startup pitch voorbeelden, investeerder criteria, Y Combinator templates"
+      },
+      "uitvoeringen": "4.5K",
+      "rating": 5
+    },
+    {
+      "id": "feedback-assistent-nederlands",
+      "originalPersonaId": "feedback-assistent",
+      "titel": "Feedback Assistent - Nederlandse Taal",
+      "beschrijving": "Gespecialiseerde feedback op Nederlandse taalvaardigheid en stijl",
+      "image": "✏️",
+      "remixedBy": {
+        "userId": "dr-bakker",
+        "naam": "Dr. Lisa Bakker",
+        "datum": "2025-09-21"
+      },
+      "changes": {
+        "systemPrompt": "Focus op Nederlandse grammatica, spelling, en stijlfiguren",
+        "knowledge": "Toegevoegd: ANS (Algemene Nederlandse Spraakkunst) regels"
+      },
+      "uitvoeringen": "6.2K",
+      "rating": 5
+    },
+    {
+      "id": "feedback-assistent-code",
+      "originalPersonaId": "feedback-assistent",
+      "titel": "Code Review Assistent",
+      "beschrijving": "Feedback op code kwaliteit, structuur en best practices",
+      "image": "✏️",
+      "remixedBy": {
+        "userId": "ir-smit",
+        "naam": "Ir. Thomas Smit",
+        "datum": "2025-09-19"
+      },
+      "changes": {
+        "systemPrompt": "Aangepast voor code review met focus op clean code principes",
+        "knowledge": "Toegevoegd: Clean Code, SOLID principes, design patterns"
+      },
+      "uitvoeringen": "8.9K",
+      "rating": 5
+    }
+  ]
+}
