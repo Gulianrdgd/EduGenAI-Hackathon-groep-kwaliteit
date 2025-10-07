@@ -22,6 +22,8 @@
         ],
         "requirementsMetDate": "2025-09-01"
       },
+      "aiLiteracyLevel": "intermediate",
+      "tags": ["high-risk", "intermediate-literacy", "medisch", "gesprekstraining"],
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": true,
@@ -117,6 +119,8 @@
         "reasoning": "Algemene schrijfhulp zonder impact op fundamentele rechten of veiligheid.",
         "requirements": []
       },
+      "aiLiteracyLevel": "beginner",
+      "tags": ["low-risk", "beginner-literacy", "schrijven", "business"],
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": false,
@@ -207,6 +211,8 @@
         ],
         "requirementsMetDate": "2025-08-15"
       },
+      "aiLiteracyLevel": "beginner",
+      "tags": ["high-risk", "beginner-literacy", "feedback", "schrijven"],
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": true,
@@ -316,6 +322,8 @@
         "reasoning": "Educatieve discussie tool zonder directe impact op beoordelingen of beslissingen.",
         "requirements": []
       },
+      "aiLiteracyLevel": "advanced",
+      "tags": ["low-risk", "advanced-literacy", "filosofie", "kritisch-denken"],
       "remixSettings": {
         "allowRemix": false,
         "allowSystemPromptEdit": false,
@@ -384,6 +392,8 @@
         "reasoning": "Informatieverstrekking zonder besluitvormingscomponent.",
         "requirements": []
       },
+      "aiLiteracyLevel": "beginner",
+      "tags": ["low-risk", "beginner-literacy", "informatie", "brightspace"],
       "detailBeschrijving": {
         "intro": "Krijg snel antwoord op vragen over je vakken in Brightspace.",
         "watKanJe": [
@@ -454,6 +464,8 @@
         "reasoning": "Oefentool voor zelfstudie zonder formele beoordelingscomponent.",
         "requirements": []
       },
+      "aiLiteracyLevel": "intermediate",
+      "tags": ["low-risk", "intermediate-literacy", "tentamen", "oefenen"],
       "detailBeschrijving": {
         "intro": "Een AI die relevante tentamenvragen genereert gebaseerd op je studiemateriaal.",
         "watKanJe": [
