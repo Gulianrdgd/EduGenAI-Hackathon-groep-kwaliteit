@@ -495,6 +495,109 @@
           "Gebruikt GPT 4.5"
         ]
       }
+    },
+    {
+  "id": "pretend-napoleon",
+  "titel": "Pretend Napoleon",
+  "beschrijving": "A persona that pretends to be Napoleon Bonaparte.",
+  "categorie": "Historisch / Educatief",
+  "uitvoeringen": "0",
+  "ratingStudenten": null,
+  "ratingDocenten": null,
+  "image": "🪖",
+  "creatorId": "unknown",
+  "detailBeschrijving": {
+    "intro": "Deze AI neemt de rol aan van Napoleon Bonaparte en beantwoordt vragen vanuit zijn historisch perspectief.",
+    "watKanJe": [
+      "Geef biografische feiten over Napoleon",
+      "Leg militaire campagnes uit",
+      "Discussieer over Napoleons politieke invloed",
+      "Speel rollenspellen waarin hij reageert op hypothetische situaties"
+    ],
+    "voorWie": "Gebruikers die historische simulaties, onderwijs of rollenspellen willen uitvoeren.",
+    "notitie": "Dit is een educatieve persona; de antwoorden zijn gebaseerd op de opgegeven kennisbronnen en mogen niet als juridisch of medisch advies worden beschouwd.",
+    "overwegingen": [
+      "Gebruikt de Britannica‑pagina over Napoleon",
+      "Gebruikt een PDF‑boek over Napoleons leven",
+      "Geen web‑search toegang"
+    ]
+  },
+"risicos": {
+  "capabilities": [
+    {
+      "risico": "Hallucinaties / verzonnen feiten",
+      "beschrijving": "Het model kan onjuiste jaartallen of gebeurtenissen verzinnen wanneer de bron niet expliciet wordt genoemd.",
+      "ernst": "medium"
     }
+  ],
+  "creator": [
+    {
+      "risico": "Beperkte brondiversiteit",
+      "beschrijving": "Alle kennis komt uit twee bronnen; andere historiografische visies (bijv. Russische, Britse, of revisionistische werken) ontbreken.",
+      "ernst": "low"
+    }
+  ],
+  "aiGenerated": [
+    {
+      "risico": "Anachronistische taal",
+      "beschrijving": "De AI kan moderne termen of waarden gebruiken die niet passen bij het 19e‑eeuwse Napoleon‑perspectief.",
+      "ernst": "medium"
+    }
+  ]
+},
+ "reviews": [
+  {
+    "naam": "Laura de Vries",
+    "rol": "Student Geschiedenis",
+    "rating": 4,
+    "datum": "2025-10-02",
+    "comment": "Leuke manier om Napoleon beter te leren kennen. De meeste feiten kloppen, maar af en toe ziet hij er een modern tintje bij."
+  },
+  {
+    "naam": "Prof. Mark Janssen",
+    "rol": "Docent Historie",
+    "rating": 3,
+    "datum": "2025-09-28",
+    "comment": "Geschikt voor inleidende lessen, maar ik blijf waarschuwen voor mogelijke anachronismen en onvolledige bronvermelding."
+  },
+  {
+    "naam": "Tom van Leeuwen",
+    "rol": "Student Politicologie",
+    "rating": 5,
+    "datum": "2025-10-01",
+    "comment": "Helpt echt bij het visualiseren van Napoleons strategieën tijdens de veldslagen – een leuke aanvulling op de colleges."
+  }
+],
+  "automated_tests": {
+    "examples": [
+      {
+        "in": "Wanneer ben je geboren?",
+        "expected_out": {
+          "contains": "1769"
+        },
+        "runs": 100,
+        "correct": 99
+      },
+      {
+        "in": "Hoe vaak was je keizer?",
+        "expected_out": {
+          "similar_to": "twee maal"
+        },
+        "runs": 100,
+        "correct": 90
+      }
+    ]
+  },
+  "knowledge": [
+    {
+      "site": "https://www.britannica.com/biography/Napoleon-I"
+    },
+    {
+      "book": "8a815041-9f54-49d8-8b8b-18d14a7527e2/Napoleon: A Life.pdf"
+    }
+  ],
+  "model": "mistral-large:123b",
+  "system_prompt": "You are Napoleon"
+}
   ]
 }

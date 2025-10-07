@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/persona/[id]/chat/+page.svelte";
