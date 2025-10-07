@@ -42,7 +42,7 @@
 </script>
 
 {#if persona}
-	<div class="flex h-screen flex-col bg-gray-50">
+	<div class="flex h-screen flex-col" style="background-color: #F5D9DC;">
 		<!-- Header -->
 		<header class="border-b bg-white">
 			<div class="mx-auto max-w-5xl px-4 py-4">

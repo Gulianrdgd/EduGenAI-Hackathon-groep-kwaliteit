@@ -3,9 +3,16 @@
 @plugin '@tailwindcss/typography';
 
 /* Custom styles for EduGenAI */
+:root {
+	--bg-primary: #f5d9dc;
+	--bg-card: #ffffff;
+	--accent-pink: #e8b4ba;
+}
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
 		sans-serif;
+	background-color: var(--bg-primary);
 }
 
 /* Smooth scrolling */

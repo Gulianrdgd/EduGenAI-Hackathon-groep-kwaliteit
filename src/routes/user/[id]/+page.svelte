@@ -26,9 +26,9 @@
 </script>
 
 {#if user}
-	<div class="min-h-screen bg-gray-50">
+	<div class="min-h-screen" style="background-color: #F5D9DC;">
 		<!-- Header -->
-		<header class="border-b bg-white">
+		<header class="border-b bg-white shadow-sm">
 			<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 				<a href="/" class="text-sm text-blue-600 hover:text-blue-800">← Terug naar overzicht</a>
 			</div>
