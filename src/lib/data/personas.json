@@ -1,0 +1,500 @@
+{
+  "populair": [
+    {
+      "id": "patient-gesprek-oncologie",
+      "titel": "Patiënt gesprek oefenen",
+      "beschrijving": "Oefen gesprekken met oncologie patiënten",
+      "categorie": "Gezondheidszorg",
+      "uitvoeringen": "25K+",
+      "ratingStudenten": 3,
+      "ratingDocenten": 4,
+      "image": "🏥",
+      "creatorId": "dr-van-der-berg",
+      "detailBeschrijving": {
+        "intro": "Cassandra is een interactieve oefenpatiënt voor geneeskundestudenten, artsen in opleiding (AIOS) en zorgprofessionals.",
+        "watKanJe": [
+          "Realistische gespreksimulatie",
+          "Begeleide symptoomverkenning",
+          "Lichamelijk onderzoek vragen stellen",
+          "Veilige leeromgeving"
+        ],
+        "voorWie": "Geneeskundestudenten en doktersassistenten die hun vaardigheden willen verbeteren",
+        "notitie": "Deze GPT is uitsluitend bedoeld voor educatieve doeleinden, niet voor echte klinische training of supervisie.",
+        "overwegingen": [
+          "Getest bij RU",
+          "Gebruikt Google web search",
+          "Gebruikt GPT 4.5",
+          "Brightspace toegang",
+          "Rapporteert veel hallucinaties na 20+ berichten"
+        ]
+      },
+      "risicos": {
+        "capabilities": [
+          {
+            "risico": "Web search toegang",
+            "beschrijving": "De persona heeft toegang tot Google web search. Dit kan leiden tot verouderde of onjuiste medische informatie.",
+            "ernst": "medium"
+          }
+        ],
+        "creator": [
+          {
+            "risico": "Beperkte testgroep",
+            "beschrijving": "Deze persona is alleen getest met geneeskundestudenten aan de Radboud Universiteit. Effectiviteit bij andere doelgroepen is onbekend.",
+            "ernst": "low"
+          },
+          {
+            "risico": "Hallucinaties bij lange gesprekken",
+            "beschrijving": "Na meer dan 20 berichten neemt de kwaliteit en consistentie van de antwoorden significant af.",
+            "ernst": "high"
+          }
+        ],
+        "aiGenerated": [
+          {
+            "risico": "Medische disclaimers ontbreken",
+            "beschrijving": "De persona geeft geen duidelijke waarschuwing dat dit geen vervanging is voor echte medische supervisie bij elke interactie.",
+            "ernst": "high"
+          },
+          {
+            "risico": "Emotionele impact",
+            "beschrijving": "Simulatie van ernstig zieke patiënten kan emotioneel belastend zijn voor studenten zonder voorafgaande waarschuwing.",
+            "ernst": "medium"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Lisa van Dam",
+          "rol": "Student Geneeskunde",
+          "rating": 4,
+          "datum": "2025-09-15",
+          "comment": "Erg handig om te oefenen! De gesprekken voelen redelijk realistisch aan. Wel merk ik dat na een lang gesprek de AI soms inconsistent wordt."
+        },
+        {
+          "naam": "Prof. Hendriks",
+          "rol": "Docent",
+          "rating": 4,
+          "datum": "2025-09-10",
+          "comment": "Uitstekende tool voor studenten om hun communicatievaardigheden te trainen. De hallucinaties na langere gesprekken zijn een aandachtspunt."
+        },
+        {
+          "naam": "Tim Bakker",
+          "rol": "Student",
+          "rating": 3,
+          "datum": "2025-08-28",
+          "comment": "Goed concept maar soms geeft de patiënt vreemde antwoorden die niet kloppen. Voor basis oefening prima."
+        }
+      ]
+    },
+    {
+      "id": "management-rapport",
+      "titel": "Management rapport schrijven",
+      "beschrijving": "Hulp bij het schrijven van professionele management rapporten",
+      "categorie": "Business",
+      "uitvoeringen": "15K+",
+      "ratingStudenten": 4,
+      "ratingDocenten": 4,
+      "image": "📊",
+      "creatorId": "drs-de-vries",
+      "detailBeschrijving": {
+        "intro": "Een AI-assistent die je helpt bij het structureren en schrijven van management rapporten.",
+        "watKanJe": [
+          "Rapport structuur opstellen",
+          "Data analyse ondersteuning",
+          "Professionele taalgebruik",
+          "Executive summary genereren"
+        ],
+        "voorWie": "Management studenten en junior managers",
+        "notitie": "Gebruik dit als hulpmiddel, niet als vervanging voor kritisch denken.",
+        "overwegingen": [
+          "Getest bij meerdere universiteiten",
+          "Gebruikt GPT 4.5",
+          "Brightspace integratie"
+        ]
+      },
+      "risicos": {
+        "capabilities": [],
+        "creator": [
+          {
+            "risico": "Business context beperkt",
+            "beschrijving": "De persona is vooral getest voor Nederlandse bedrijfscontexten. Internationale rapportage kan afwijken.",
+            "ernst": "low"
+          }
+        ],
+        "aiGenerated": [
+          {
+            "risico": "Over-reliance op AI",
+            "beschrijving": "Studenten kunnen te afhankelijk worden van de tool en eigen kritisch denkvermogen verwaarlozen.",
+            "ernst": "medium"
+          },
+          {
+            "risico": "Plagiaat risico",
+            "beschrijving": "Generated tekst kan te letterlijk overgenomen worden zonder eigen inbreng, wat plagiaat kan zijn.",
+            "ernst": "high"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Sarah Jansen",
+          "rol": "Student Business Management",
+          "rating": 5,
+          "datum": "2025-09-20",
+          "comment": "Super handig! Hielp me enorm met mijn eerste management rapport. De structuur suggesties waren echt waardevol."
+        },
+        {
+          "naam": "Mark Peters",
+          "rol": "Student",
+          "rating": 4,
+          "datum": "2025-09-12",
+          "comment": "Goede tool, maar je moet wel zelf kritisch blijven nadenken. Het is een hulpmiddel, geen vervanging."
+        },
+        {
+          "naam": "Dr. Vermeer",
+          "rol": "Docent",
+          "rating": 4,
+          "datum": "2025-08-30",
+          "comment": "Ik zie dat studenten die deze tool gebruiken beter gestructureerde rapporten inleveren. Aanrader!"
+        }
+      ]
+    }
+  ],
+  "voor-studenten": [
+    {
+      "id": "feedback-assistent",
+      "titel": "Feedback Assistent",
+      "beschrijving": "Krijg directe feedback op je werk",
+      "categorie": "Algemeen",
+      "uitvoeringen": "30K+",
+      "ratingStudenten": 5,
+      "ratingDocenten": 5,
+      "image": "✏️",
+      "creatorId": "dr-bakker",
+      "detailBeschrijving": {
+        "intro": "Een AI-assistent die constructieve feedback geeft op je academische werk.",
+        "watKanJe": [
+          "Essays beoordelen",
+          "Structuur feedback",
+          "Taalgebruik verbeteren",
+          "Argumentatie versterken"
+        ],
+        "voorWie": "Alle studenten die hun werk willen verbeteren",
+        "notitie": "Feedback is bedoeld als leidraad, niet als definitief oordeel.",
+        "overwegingen": [
+          "Gebruikt GPT 4.5",
+          "Privacy-bewust",
+          "Brightspace integratie"
+        ]
+      },
+      "risicos": {
+        "capabilities": [
+          {
+            "risico": "Brightspace data toegang",
+            "beschrijving": "De persona heeft toegang tot student werk in Brightspace. Privacy van documenten moet gewaarborgd zijn.",
+            "ernst": "medium"
+          }
+        ],
+        "creator": [],
+        "aiGenerated": [
+          {
+            "risico": "Feedback bias",
+            "beschrijving": "AI feedback kan systematische voorkeuren hebben die niet altijd aansluiten bij specifieke vakgebieden of docent verwachtingen.",
+            "ernst": "low"
+          },
+          {
+            "risico": "Vervanging docent feedback",
+            "beschrijving": "Studenten kunnen AI feedback verkiezen boven menselijke feedback van docenten, wat de leerrelatie kan verstoren.",
+            "ernst": "medium"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Emma de Jong",
+          "rol": "Student Psychologie",
+          "rating": 5,
+          "datum": "2025-09-25",
+          "comment": "Fantastische tool! De feedback is constructief en helpt me echt vooruit. Ik gebruik het voor al mijn essays."
+        },
+        {
+          "naam": "Jelle Smit",
+          "rol": "Student Rechten",
+          "rating": 5,
+          "datum": "2025-09-18",
+          "comment": "Beste AI tool die ik tot nu toe heb gebruikt. Geeft specifieke en bruikbare feedback op structuur en argumentatie."
+        },
+        {
+          "naam": "Dr. Bakker",
+          "rol": "Docent",
+          "rating": 5,
+          "datum": "2025-09-05",
+          "comment": "Ik beveel deze tool aan al mijn studenten. Het niveau van de feedback is vergelijkbaar met wat ik zelf zou geven."
+        }
+      ]
+    },
+    {
+      "id": "patient-gesprek-oncologie-student",
+      "titel": "Patiënt gesprek oefenen",
+      "beschrijving": "Oefen patiëntgesprekken in de oncologie",
+      "categorie": "Gezondheidszorg",
+      "uitvoeringen": "25K+",
+      "ratingStudenten": 3,
+      "ratingDocenten": 4,
+      "image": "🏥",
+      "creatorId": "dr-van-der-berg",
+      "detailBeschrijving": {
+        "intro": "Cassandra is een interactieve oefenpatiënt voor geneeskundestudenten.",
+        "watKanJe": [
+          "Realistische gespreksimulatie",
+          "Begeleide symptoomverkenning",
+          "Lichamelijk onderzoek vragen stellen",
+          "Veilige leeromgeving"
+        ],
+        "voorWie": "Geneeskundestudenten en doktersassistenten",
+        "notitie": "Deze GPT is uitsluitend bedoeld voor educatieve doeleinden.",
+        "overwegingen": [
+          "Getest bij RU",
+          "Gebruikt Google web search",
+          "Gebruikt GPT 4.5"
+        ]
+      }
+    },
+    {
+      "id": "socratische-discussieleider",
+      "titel": "Socratische Discussieleider",
+      "beschrijving": "Voer diepgaande discussies over vakinhoud",
+      "categorie": "Filosofie & Denken",
+      "uitvoeringen": "18K+",
+      "ratingStudenten": 4,
+      "ratingDocenten": 5,
+      "image": "💭",
+      "creatorId": "prof-jansen",
+      "detailBeschrijving": {
+        "intro": "Een AI die de Socratische methode gebruikt om kritisch denken te stimuleren.",
+        "watKanJe": [
+          "Diepgaande vragen stellen",
+          "Aannames uitdagen",
+          "Argumenten analyseren",
+          "Nieuwe perspectieven ontdekken"
+        ],
+        "voorWie": "Studenten die hun kritisch denkvermogen willen ontwikkelen",
+        "notitie": "Beste resultaten bij filosofische en ethische vraagstukken.",
+        "overwegingen": [
+          "Gebruikt GPT 4.5",
+          "Geschikt voor alle disciplines"
+        ]
+      },
+      "risicos": {
+        "capabilities": [],
+        "creator": [],
+        "aiGenerated": [
+          {
+            "risico": "Frustratie bij studenten",
+            "beschrijving": "De Socratische methode kan frustrerend zijn voor studenten die directe antwoorden verwachten, wat kan leiden tot afwijzing van de tool.",
+            "ernst": "low"
+          },
+          {
+            "risico": "Geen duidelijke antwoorden",
+            "beschrijving": "Voor feitelijke vragen is deze aanpak niet geschikt. Studenten kunnen verkeerde conclusies trekken.",
+            "ernst": "medium"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Anna Visser",
+          "rol": "Student Filosofie",
+          "rating": 5,
+          "datum": "2025-09-22",
+          "comment": "Deze tool heeft mijn denken echt veranderd. De vragen dwingen je om dieper na te denken over je aannames."
+        },
+        {
+          "naam": "Bas Timmers",
+          "rol": "Student Politicologie",
+          "rating": 4,
+          "datum": "2025-09-14",
+          "comment": "Heel interessant! Soms frustrerend dat het alleen maar vragen stelt, maar dat is juist het punt. Leerzaam."
+        }
+      ]
+    },
+    {
+      "id": "vak-informatie",
+      "titel": "Vak informatie",
+      "beschrijving": "Informatie over je Brightspace vakken",
+      "categorie": "Studie Support",
+      "uitvoeringen": "40K+",
+      "ratingStudenten": 5,
+      "ratingDocenten": 4,
+      "image": "📚",
+      "creatorId": "ir-smit",
+      "detailBeschrijving": {
+        "intro": "Krijg snel antwoord op vragen over je vakken in Brightspace.",
+        "watKanJe": [
+          "Vakinformatie opzoeken",
+          "Deadlines checken",
+          "Studiemateriaal vinden",
+          "Toetsinfo raadplegen"
+        ],
+        "voorWie": "Alle studenten die Brightspace gebruiken",
+        "notitie": "Directe koppeling met je Brightspace omgeving.",
+        "overwegingen": [
+          "Brightspace integratie vereist",
+          "Real-time data"
+        ]
+      },
+      "risicos": {
+        "capabilities": [
+          {
+            "risico": "Brightspace API toegang",
+            "beschrijving": "Vereist volledige toegang tot Brightspace data. Bij een security breach kan gevoelige informatie gelekt worden.",
+            "ernst": "high"
+          }
+        ],
+        "creator": [
+          {
+            "risico": "Real-time sync issues",
+            "beschrijving": "Data synchronisatie met Brightspace kan vertragingen hebben, waardoor studenten verouderde informatie krijgen.",
+            "ernst": "low"
+          }
+        ],
+        "aiGenerated": [
+          {
+            "risico": "Data privacy",
+            "beschrijving": "Studenten vragen kunnen gevoelige academische informatie bevatten die door de AI wordt verwerkt.",
+            "ernst": "medium"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Sophie Klaassen",
+          "rol": "Student Informatica",
+          "rating": 5,
+          "datum": "2025-09-28",
+          "comment": "Super handig! Ik hoef niet meer door alle Brightspace pagina's te zoeken. Alles in één keer."
+        },
+        {
+          "naam": "Lars Berg",
+          "rol": "Student Economie",
+          "rating": 5,
+          "datum": "2025-09-19",
+          "comment": "Bespaart me zoveel tijd! Vooral als je meerdere vakken tegelijk doet is dit een uitkomst."
+        }
+      ]
+    },
+    {
+      "id": "tentamen-vragen-generator",
+      "titel": "Tentamen vragen generator",
+      "beschrijving": "Genereer oefenvragen voor je tentamen",
+      "categorie": "Toetsvoorbereiding",
+      "uitvoeringen": "35K+",
+      "ratingStudenten": 4,
+      "ratingDocenten": 4,
+      "image": "❓",
+      "creatorId": "dr-bakker",
+      "detailBeschrijving": {
+        "intro": "Een AI die relevante tentamenvragen genereert gebaseerd op je studiemateriaal.",
+        "watKanJe": [
+          "Multiple choice vragen maken",
+          "Open vragen genereren",
+          "Moeilijkheidsgraad aanpassen",
+          "Antwoorden controleren"
+        ],
+        "voorWie": "Studenten die zich willen voorbereiden op tentamens",
+        "notitie": "Gebruik naast je reguliere studiemateriaal.",
+        "overwegingen": [
+          "Gebruikt GPT 4.5",
+          "Kan Brightspace materiaal gebruiken"
+        ]
+      },
+      "risicos": {
+        "capabilities": [
+          {
+            "risico": "Brightspace content access",
+            "beschrijving": "Toegang tot studiemateriaal betekent dat de AI copyright beschermd materiaal kan verwerken.",
+            "ernst": "medium"
+          }
+        ],
+        "creator": [],
+        "aiGenerated": [
+          {
+            "risico": "Vraag kwaliteit varieert",
+            "beschrijving": "Gegenereerde vragen kunnen variëren in kwaliteit en niet altijd het juiste niveau of focus hebben.",
+            "ernst": "medium"
+          },
+          {
+            "risico": "False confidence",
+            "beschrijving": "Studenten kunnen vals vertrouwen krijgen als oefenvragen niet representatief zijn voor het echte tentamen.",
+            "ernst": "high"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "naam": "Nina Dekker",
+          "rol": "Student Biologie",
+          "rating": 4,
+          "datum": "2025-09-26",
+          "comment": "Goede oefentool! De vragen zijn relevant en helpen me goed voorbereiden. Soms wel wat basis."
+        },
+        {
+          "naam": "Robin Hendriks",
+          "rol": "Student Scheikunde",
+          "rating": 4,
+          "datum": "2025-09-11",
+          "comment": "Handig voor zelfstudie. Genereert veel vragen snel. Kwaliteit is meestal goed."
+        }
+      ]
+    }
+  ],
+  "gedeeld-met-jou": [
+    {
+      "id": "feedback-assistent-gedeeld",
+      "titel": "Feedback Assistent",
+      "beschrijving": "Krijg directe feedback op je werk",
+      "categorie": "Algemeen",
+      "uitvoeringen": "30K+",
+      "ratingStudenten": 5,
+      "ratingDocenten": 5,
+      "image": "✏️",
+      "gedeeldDoor": "Dr. van der Berg",
+      "creatorId": "dr-bakker",
+      "detailBeschrijving": {
+        "intro": "Een AI-assistent die constructieve feedback geeft op je academische werk.",
+        "watKanJe": [
+          "Essays beoordelen",
+          "Structuur feedback",
+          "Taalgebruik verbeteren"
+        ],
+        "voorWie": "Alle studenten",
+        "notitie": "Gedeeld door je docent.",
+        "overwegingen": [
+          "Gebruikt GPT 4.5"
+        ]
+      }
+    },
+    {
+      "id": "socratische-discussieleider-gedeeld",
+      "titel": "Socratische Discussieleider",
+      "beschrijving": "Voer diepgaande discussies over vakinhoud",
+      "categorie": "Filosofie & Denken",
+      "uitvoeringen": "18K+",
+      "ratingStudenten": 4,
+      "ratingDocenten": 5,
+      "image": "💭",
+      "gedeeldDoor": "Prof. Jansen",
+      "creatorId": "prof-jansen",
+      "detailBeschrijving": {
+        "intro": "Een AI die de Socratische methode gebruikt.",
+        "watKanJe": [
+          "Diepgaande vragen stellen",
+          "Aannames uitdagen"
+        ],
+        "voorWie": "Alle studenten",
+        "notitie": "Gedeeld door je docent.",
+        "overwegingen": [
+          "Gebruikt GPT 4.5"
+        ]
+      }
+    }
+  ]
+}

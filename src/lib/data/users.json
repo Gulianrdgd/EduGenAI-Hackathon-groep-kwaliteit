@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "dr-van-der-berg",
+      "naam": "Dr. Sophie van der Berg",
+      "functie": "Docent Geneeskunde",
+      "universiteit": "Radboud Universiteit",
+      "bio": "Medisch docent met 15 jaar ervaring in het begeleiden van geneeskundestudenten. Gepassioneerd over innovatief onderwijs en het inzetten van AI voor betere leerresultaten.",
+      "avatar": "👩‍⚕️",
+      "createdPersonas": [
+        "patient-gesprek-oncologie",
+        "patient-gesprek-oncologie-student"
+      ],
+      "usingPersonas": [
+        "feedback-assistent",
+        "socratische-discussieleider"
+      ]
+    },
+    {
+      "id": "prof-jansen",
+      "naam": "Prof. Dr. Mark Jansen",
+      "functie": "Hoogleraar Filosofie",
+      "universiteit": "Universiteit Utrecht",
+      "bio": "Filosoof en onderwijskundige die kritisch denken centraal stelt in zijn onderwijs. Ontwikkelt AI-tools om studenten te helpen complexe vraagstukken te analyseren.",
+      "avatar": "👨‍🏫",
+      "createdPersonas": [
+        "socratische-discussieleider",
+        "socratische-discussieleider-gedeeld"
+      ],
+      "usingPersonas": [
+        "feedback-assistent",
+        "tentamen-vragen-generator"
+      ]
+    },
+    {
+      "id": "drs-de-vries",
+      "naam": "Drs. Emma de Vries",
+      "functie": "Docent Business Management",
+      "universiteit": "Erasmus Universiteit Rotterdam",
+      "bio": "Expert in management en organisatiekunde. Helpt studenten professionele vaardigheden te ontwikkelen door praktijkgerichte AI-assistenten.",
+      "avatar": "👩‍💼",
+      "createdPersonas": [
+        "management-rapport"
+      ],
+      "usingPersonas": [
+        "feedback-assistent",
+        "vak-informatie"
+      ]
+    },
+    {
+      "id": "dr-bakker",
+      "naam": "Dr. Lisa Bakker",
+      "functie": "Onderwijskundige & AI Specialist",
+      "universiteit": "Universiteit van Amsterdam",
+      "bio": "Onderwijsinnovator die AI-tools ontwikkelt voor gepersonaliseerd leren. Gelooft in de kracht van directe, constructieve feedback voor student succes.",
+      "avatar": "👩‍🔬",
+      "createdPersonas": [
+        "feedback-assistent",
+        "feedback-assistent-gedeeld",
+        "tentamen-vragen-generator"
+      ],
+      "usingPersonas": [
+        "socratische-discussieleider",
+        "vak-informatie"
+      ]
+    },
+    {
+      "id": "ir-smit",
+      "naam": "Ir. Thomas Smit",
+      "functie": "Systeem Architect",
+      "universiteit": "TU Delft",
+      "bio": "Technisch specialist die de brug slaat tussen Brightspace en AI. Ontwikkelt integraties om studenten naadloos toegang te geven tot hun studiemateriaal.",
+      "avatar": "👨‍💻",
+      "createdPersonas": [
+        "vak-informatie"
+      ],
+      "usingPersonas": [
+        "feedback-assistent",
+        "tentamen-vragen-generator"
+      ]
+    }
+  ]
+}
