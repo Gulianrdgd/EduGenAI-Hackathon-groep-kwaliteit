@@ -14,6 +14,11 @@
 			image: string;
 			gedeeldDoor?: string;
 			creatorId?: string;
+			aiActClassification?: {
+				riskLevel: 'low-risk' | 'high-risk';
+				reasoning: string;
+				requirements: string[];
+			};
 		};
 	}
 
@@ -83,8 +88,19 @@
 		</div>
 	</div>
 
-	<div class="mt-4">
+	<div class="mt-4 flex items-center gap-2">
 		<span class="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700">{persona.categorie}</span>
+		{#if persona.aiActClassification}
+			{#if persona.aiActClassification.riskLevel === 'high-risk'}
+				<span class="rounded bg-red-100 px-2 py-1 text-xs font-semibold text-red-800">
+					⚠️ High-Risk AI
+				</span>
+			{:else}
+				<span class="rounded bg-green-100 px-2 py-1 text-xs font-semibold text-green-800">
+					✓ Low-Risk AI
+				</span>
+			{/if}
+		{/if}
 	</div>
 </a>
 

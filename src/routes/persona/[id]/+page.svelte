@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import PersonaTabs from '$lib/components/PersonaTabs.svelte';
 	import ReportModal from '$lib/components/ReportModal.svelte';
+	import AIActRequirementsModal from '$lib/components/AIActRequirementsModal.svelte';
 	import personasData from '$lib/data/personas.json';
 	import usersData from '$lib/data/users.json';
 
@@ -25,9 +26,21 @@
 	// Report modal state
 	let showReportModal = $state(false);
 
+	// AI Act Requirements modal state
+	let showRequirementsModal = $state(false);
+	let requirementsAccepted = $state(false);
+
 	if (!persona) {
 		// Handle persona not found
 		console.error('Persona not found:', id);
+	}
+
+	function handleStartChat() {
+		if (persona?.aiActClassification?.riskLevel === 'high-risk' && !requirementsAccepted) {
+			showRequirementsModal = true;
+		} else {
+			window.location.href = `/persona/${persona?.id}/chat`;
+		}
 	}
 </script>
 
@@ -44,6 +57,29 @@
 				</div>
 			</div>
 		</header>
+
+		<!-- AI Act Warning Banner -->
+		{#if persona.aiActClassification?.riskLevel === 'high-risk'}
+			<div class="border-b border-red-200 bg-red-50">
+				<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+					<div class="flex items-start gap-3">
+						<div class="text-2xl">⚠️</div>
+						<div class="flex-1">
+							<h3 class="font-semibold text-red-900">High-Risk AI Systeem (EU AI Act)</h3>
+							<p class="mt-1 text-sm text-red-800">
+								{persona.aiActClassification.reasoning}
+							</p>
+							<button
+								onclick={() => (showRequirementsModal = true)}
+								class="mt-2 text-sm font-medium text-red-900 underline hover:text-red-700"
+							>
+								Bekijk vereisten →
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		{/if}
 
 		<!-- Persona Header -->
 		<div class="bg-white py-8 shadow-sm">
@@ -83,12 +119,12 @@
 
 						<!-- CTA Buttons -->
 						<div class="mt-6 flex items-center gap-3">
-							<a
-								href="/persona/{persona.id}/chat"
+							<button
+								onclick={handleStartChat}
 								class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700"
 							>
 								Start gesprek
-							</a>
+							</button>
 							<button
 								class="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
 								onclick={() => (showReportModal = true)}
@@ -115,6 +151,17 @@
 			isOpen={showReportModal}
 			onClose={() => (showReportModal = false)}
 		/>
+
+		<!-- AI Act Requirements Modal -->
+		{#if persona.aiActClassification?.riskLevel === 'high-risk'}
+			<AIActRequirementsModal
+				personaTitel={persona.titel}
+				aiActClassification={persona.aiActClassification}
+				isOpen={showRequirementsModal}
+				onClose={() => (showRequirementsModal = false)}
+				onAccept={() => (requirementsAccepted = true)}
+			/>
+		{/if}
 	</div>
 {:else}
 	<div class="flex min-h-screen items-center justify-center">

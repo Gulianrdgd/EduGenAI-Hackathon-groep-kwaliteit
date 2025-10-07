@@ -10,6 +10,18 @@
       "ratingDocenten": 4,
       "image": "🏥",
       "creatorId": "dr-van-der-berg",
+      "aiActClassification": {
+        "riskLevel": "high-risk",
+        "reasoning": "Medische training tool die invloed kan hebben op gezondheids- en veiligheidsbeslissingen van toekomstige zorgverleners.",
+        "requirements": [
+          "Menselijk toezicht: Docent moet beschikbaar zijn tijdens gebruik",
+          "Data kwaliteit: Gevalideerde medische scenario's vereist",
+          "Transparantie: Studenten moeten weten dat dit AI-gesimuleerd is",
+          "Nauwkeurigheid: Regelmatige evaluatie van medische correctheid",
+          "Logging: Alle interacties worden opgeslagen voor kwaliteitscontrole"
+        ],
+        "requirementsMetDate": "2025-09-01"
+      },
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": true,
@@ -100,6 +112,11 @@
       "ratingDocenten": 4,
       "image": "📊",
       "creatorId": "drs-de-vries",
+      "aiActClassification": {
+        "riskLevel": "low-risk",
+        "reasoning": "Algemene schrijfhulp zonder impact op fundamentele rechten of veiligheid.",
+        "requirements": []
+      },
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": false,
@@ -179,6 +196,17 @@
       "ratingDocenten": 5,
       "image": "✏️",
       "creatorId": "dr-bakker",
+      "aiActClassification": {
+        "riskLevel": "high-risk",
+        "reasoning": "Beoordelingssysteem dat invloed heeft op studenten hun academische prestaties en beslissingen.",
+        "requirements": [
+          "Transparantie: Studenten moeten weten dat feedback AI-gegenereerd is",
+          "Menselijk toezicht: Docent moet finaal oordeel geven",
+          "Bias monitoring: Regelmatige controle op vooringenomenheid in feedback",
+          "Recht op uitleg: Studenten kunnen vragen waarom bepaalde feedback gegeven is"
+        ],
+        "requirementsMetDate": "2025-08-15"
+      },
       "remixSettings": {
         "allowRemix": true,
         "allowSystemPromptEdit": true,
@@ -283,6 +311,11 @@
       "ratingDocenten": 5,
       "image": "💭",
       "creatorId": "prof-jansen",
+      "aiActClassification": {
+        "riskLevel": "low-risk",
+        "reasoning": "Educatieve discussie tool zonder directe impact op beoordelingen of beslissingen.",
+        "requirements": []
+      },
       "remixSettings": {
         "allowRemix": false,
         "allowSystemPromptEdit": false,
@@ -346,6 +379,11 @@
       "ratingDocenten": 4,
       "image": "📚",
       "creatorId": "ir-smit",
+      "aiActClassification": {
+        "riskLevel": "low-risk",
+        "reasoning": "Informatieverstrekking zonder besluitvormingscomponent.",
+        "requirements": []
+      },
       "detailBeschrijving": {
         "intro": "Krijg snel antwoord op vragen over je vakken in Brightspace.",
         "watKanJe": [
@@ -411,6 +449,11 @@
       "ratingDocenten": 4,
       "image": "❓",
       "creatorId": "dr-bakker",
+      "aiActClassification": {
+        "riskLevel": "low-risk",
+        "reasoning": "Oefentool voor zelfstudie zonder formele beoordelingscomponent.",
+        "requirements": []
+      },
       "detailBeschrijving": {
         "intro": "Een AI die relevante tentamenvragen genereert gebaseerd op je studiemateriaal.",
         "watKanJe": [
