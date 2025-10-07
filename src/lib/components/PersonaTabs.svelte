@@ -13,6 +13,20 @@
 		ernst: 'low' | 'medium' | 'high';
 	}
 
+	interface ExpectedOut {
+		contains?: string;
+		similar_to?: string;
+	}
+	interface TestExample {
+		in: string;
+		expected_out: ExpectedOut;
+		runs: number;
+		correct: number;
+	}
+	interface AutomatedTests {
+		examples: TestExample[];
+	}
+
 	interface Props {
 		persona: {
 			id: string;
@@ -30,6 +44,7 @@
 				creator: Risico[];
 				aiGenerated: Risico[];
 			};
+			automated_tests?: AutomatedTests;
 		};
 	}
 
@@ -68,6 +83,16 @@
 
 	function renderStars(rating: number): string {
 		return '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
+	}
+
+	function formatExpected(out: ExpectedOut): string {
+		if (out.contains) return `Moet bevatten: "${out.contains}"`;
+		if (out.similar_to) return `Moet lijken op: "${out.similar_to}"`;
+		return 'Onbekende verwachting';
+	}
+	function accuracy(correct: number, runs: number): string {
+		if (runs === 0) return '0 %';
+		return `${Math.round((correct / runs) * 100)} %`;
 	}
 
 	let activeTab = $state('beschrijving');
@@ -224,6 +249,55 @@
 							</div>
 						{/if}
 					</div>
+
+
+{#if persona.automated_tests?.examples?.length}
+	<div class="mt-8">
+		<h3 class="text-xl font-semibold text-gray-900">Geautomatiseerde tests</h3>
+
+		<div class="mt-4 space-y-6">
+			{#each persona.automated_tests.examples as ex, i}
+				<div class="rounded-lg border border-gray-200 p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+					<div class="flex justify-between items-start">
+						<div class="flex-1">
+							<div class="text-lg font-semibold text-gray-900 mb-2">
+								Test #{i + 1}
+							</div>
+
+							<!-- Vraag -->
+							<div class="text-sm text-gray-600 font-medium">Vraag</div>
+							<p class="text-gray-800 mb-2">{ex.in}</p>
+
+							<!-- Verwachte output -->
+							<div class="text-sm text-gray-600 font-medium">Verwachte output</div>
+							<p class="text-gray-800 mb-2">{formatExpected(ex.expected_out)}</p>
+
+							<!-- Statistieken -->
+							<div class="flex gap-4 text-sm text-gray-600 mt-2">
+								<span>Runs: <strong>{ex.runs}</strong></span>
+								<span>Correct: <strong>{ex.correct}</strong></span>
+								<span>Nauwkeurigheid: <strong>{accuracy(ex.correct, ex.runs)}</strong></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+{:else}
+	<div class="mt-8 py-12 text-center">
+		<div class="text-6xl">⚙️</div>
+		<h3 class="mt-4 text-lg font-medium text-gray-900">
+			Geen geautomatiseerde tests beschikbaar
+		</h3>
+		<p class="mt-2 text-sm text-gray-600">
+			Voeg een `automated_tests`‑object toe aan de persona‑definitie om hier resultaten te zien.
+		</p>
+	</div>
+{/if}
+
+
+
 				{/if}
 			</div>
 		{:else if activeTab === 'remixes'}
